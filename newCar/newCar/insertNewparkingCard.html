@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./css/home.css" />
+		<link rel="stylesheet" href="css/leftmenu.css" />
+		<link rel="stylesheet" href="./css/backgroundlayer.css" />
+		<link rel="stylesheet" href="./css/formblock.css"/>
+		<script type="text/javascript" src="js/nav.js"></script>
+		<script type="text/javascript" src="./js/page.js"></script>
+		<title></title>
+	</head>
+	<body onload="Rendering();">
+		<div id="popLayer">
+			<div class="mynav" id="nav"></div>
+			<div class="menu" id="lmenu">
+				<ul>
+					<li><a href="login.html">车辆登记管理</a></li>
+					<li><a href="loginexport.html">登记车辆信息导出</a></li>
+				</ul>
+			</div>
+			<div class="centers">
+				<div>
+					<form>
+						<fieldset>
+							<legend></legend>
+							<div class="div5">
+								<p>小区结点名称:</p>
+							<select>
+									<option name="xiaoqu1">小区一</option>
+									<option name="xiaoqu2">小区二</option>
+									<option name="xiaoqu3">小区三</option>
+									<option name="xiaoqu4">小区四</option>
+									<option name="xiaoqu5">小区五</option>
+									<option name="xiaoqu6">小区六</option>
+									<option name="xiaoqu7">小区七</option>
+								</select>
+							</div>
+							<div class="div5">
+									<p>状态:</p>
+									<select>
+									<option name="all">全部</option>
+									<option name="start">开启</option>
+									<option name="close">关闭</option>
+								</select>
+							</div>
+								<br />
+								<br />
+								<br />
+								<div class="div6">
+									<p>登记属性:</p>
+										<select>
+										<option name="ownerCar">业主车</option>
+										<option name="nownerCar">非业主车</option>
+									</select>
+								</div>
+								<div class="div6">
+									<p>业主姓名:</p>
+									<input type="text"  placeholder="请输入" name="ownerName"/>
+								</div>
+								<div class="div6">
+									<p>楼号:</p>
+										<select>
+										<option name="firsttower">1号楼</option>
+										<option name="secondtower">2号楼</option>
+									</select>
+								</div>
+								<div class="div6">
+									<p>房间号:</p>
+									<input type="text"  placeholder="如:1-001" name="roomNumber"/>
+								</div>
+								<div class="div6">
+									<p>联系电话:</p>
+									<input type="text"  placeholder="请输入" name="phoneNumber"/>
+								</div>
+								<br />
+								<br />
+								<br />
+								<div class="div7"></div>
+								<div class="div7">	
+									<p>计费标准:</p>
+								</div>
+								<div class="div7">
+							<input  type="radio" name="计费标准" value=1 onClick="CheckRadio()" checked>每年次 
+								</div>
+								<div class="div7">
+							<input type="radio" name="计费标准" value=2 onClick="CheckRadio()">计时制
+								</div>
+								<div class="div7">
+									<input type="radio" name="计费标准" value=3 onClick="CheckRadio()">计速制		
+								</div>
+								<br />
+								<br />
+								<br />
+								<div class="div3">
+									<p>应交费用:</p>
+									<input type="number" name="money" placeholder="单位:元"/>
+								</div>
+								<br />
+								<br />
+								<br />
+								<div class="div7">
+								</div>
+								<br />
+								<div class="div7"></div>
+								<br />
+								<br />
+								<div class="div8">
+									<p>车辆类型:</p>
+									<select>
+										<option name="wei">微型轿车</option>
+										<option name="qing">轻型轿车</option>
+										<option name="zhong">中型轿车</option>
+										<option name="ka">卡车</option>
+										<option name="ke">客车</option>
+										<option name="others">其他</option>
+									</select>
+								</div>
+								<div class="div8">
+									<p>使用限制:</p>
+									<select>
+										<option name="geren">仅个人使用</option>
+										<option name="taren">可供他人使用</option>
+									</select>
+								</div>
+								<div class="div8">
+									<p>车牌号</p>
+									<input type="text" placeholder="请输入"/>	
+								</div>
+								<div class="div8">
+									<span><p>注(*临时牌照不可登记)</p></span>
+								</div>
+								<br />
+								<br />
+								<br />
+								<div class="div7"></div>
+									<div class="div7">	
+										<p>立即生效:</p>
+									</div>
+									<div class="div7">
+								<input  type="radio" name="lyes" value=1 onClick="CheckRadio2()" checked>是
+									</div>
+									<div class="div7">
+								<input type="radio" name="lyes" value=2 onClick="CheckRadio2()">否
+									</div>
+								<br />
+								<br />
+								<br />
+								<div class="div7"></div>
+								<div class="div7"></div>
+								<div class="div7">
+									<p>有效日期</p>
+									<input type="text" name="ydate" />
+								</div>
+								<div class="div7"></div>
+								<div class="div7"></div>
+								<div class="div7"></div>
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+									<div class="div7">	
+										<p>全天通行:</p>
+									</div>
+									<div class="div7">
+								<input  type="radio" name="lyes" value=1 onClick="CheckRadio2()" checked>是
+									</div>
+									<div class="div7">
+								<input type="radio" name="lyes" value=2 onClick="CheckRadio2()">否
+									</div>
+								<div class="div9">
+									<p>说明</p>
+									<input type="text" />
+								</div>
+								<div class="div10">
+								<input type="submit" name="queren" value="确认"/>
+								</div>
+								<div class="div10">
+								<input type="button" name="取消" value="取消"/>
+								</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

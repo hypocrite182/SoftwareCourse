@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"
+        name="viewport">
+    <title>Dashboard &mdash; Stisla</title>
+
+    <link rel="stylesheet" href="../dist/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/modules/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+
+    <link rel="stylesheet" href="../dist/modules/summernote/summernote-lite.css">
+    <link rel="stylesheet" href="../dist/modules/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../dist/css/demo.css">
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="stylesheet" href="../dist/css/justcomewan.css">
+</head>
+
+<body>
+    <div class="mynav" id="nav"></div>
+    <div class="row" style="max-width: 100%;">
+        <div class="col-2 menu">
+            <ul>
+                <li><a href="#">停车场管理</a></li>
+                <li><a href="./计费规则管理.html">计费规则管理</a></li>
+                <li><a href="./设备管理.html">设备管理</a></li>
+            </ul>
+        </div>
+        <div class="col-10">
+    <div class="row">
+        <div class="col-12" style="margin: 30px auto;">
+            <div class="card">
+                <div class="row" style="padding-left: 40px;">
+                    <div class="form-group col-2">
+                        <label for="id">停车场ID</label>
+                        <input type="text" class="form-control" name="id" autofocus="" placeholder="请输入">
+                    </div>
+                    <div class="form-group col-2">
+                        <label for="name">停车场名称</label>
+                        <input type="text" class="form-control" name="name" placeholder="请输入">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="area">区域</label>
+                        <div class="form-inline">
+                            <select class="form-control" name="area">
+                                <option>请选择</option>
+                                <option>河南</option>
+                            </select>
+                            <select class="form-control" name="area-detail">
+                                <option>请选择</option>
+                                <option>河南</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-2">
+                        <label for="master">负责人</label>
+                        <input type="text" class="form-control" name="master" placeholder="请输入">
+                    </div>
+                    <div class="form-group col-2">
+                        <label for="status">状态</label>
+                            <select class="form-control" name="status">
+                                <option>全部</option>
+                                <option>开启</option>
+                                <option>关闭</option>
+                            </select>   
+                    </div>
+                </div>
+                <div class="row" style="padding-left: 160px; padding-bottom: 30px;">
+                    <div class="col-4">
+                    <button type="button" class="btn btn-default btn-success">查询</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-default btn-success">重置</button>
+                </div>
+                <div class="col-4">
+                    <a href="./新增停车场.html" style="color: white;">
+                    <button type="button" class="btn btn-default btn-warning">新增</button></a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" style="margin: 0 auto;">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th></th>
+                                    <th>序号</th>
+                                    <th>停车场ID</th>
+                                    <th>停车场名称</th>
+                                    <th>停车场地址</th>
+                                    <th>开放时间</th>
+                                    <th>车位数</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="form-control" /></td>
+                                    <td>1</td>
+                                    <td>小区一-0001</td>
+                                    <td>富贵停车场</td>
+                                    <td>XXX房地产公司麒麟一号小区</td>
+                                    <td>00:00~00:00~24:00</td>
+                                    <td>360</td>
+                                    <td><div class="checkbox"><label><input type="checkbox">开启</label></div></td>
+                                    <td><a href="#">查看</a>&nbsp;&nbsp;<a href="#">编辑</a>&nbsp;&nbsp;<a href="#">删除</a></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td style="border: none;"><div class="checkbox" ><label class="form-control" style="border: none;"><input type="checkbox" >全选</label></div></td>
+                                    <td style="border: none;"><select class="form-control"><option>批量操作</option><option>开启</option><option>关闭</option><option>删除</option></select></td>
+                                    <td style="border: none;"><button class="form-control">确定</button></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer text-right">
+                    <nav class="d-inline-block">
+                        <ul class="pagination mb-0">
+                            共10页/100条数据
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            跳至<input type="number" style="width: 50px; font-size: small;" >页
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="../dist/modules/jquery.min.js"></script>
+    <script src="../dist/modules/popper.js"></script>
+    <script src="../dist/modules/tooltip.js"></script>
+    <script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+    <script src="../dist/js/sa-functions.js"></script>
+    <script src="../dist/js/justcomewan.js"></script>
+</body>
+
+</html>

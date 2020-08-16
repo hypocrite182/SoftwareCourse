@@ -1,0 +1,155 @@
+.div2{
+				position: absolute;
+				top: hpx;
+				bottom: 0;
+			}
+			.centers{
+					margin-top: 0.45%;
+					padding:8px0;
+					float:right;
+					display: inline-block;
+					width: 80%;
+					height: 80%;
+			}  
+			.div3{
+				width:14.5%;
+				padding-left:2%;
+				float:left;
+				display: inline-block;
+			}
+				
+			.div3 input{
+				width: 90%;
+				font-size: 20px;
+			}
+			.div3 select{
+				width: 60%;
+				font-size: 15px;
+			}
+			.div3 p{
+				font-size: small;
+			}			
+			.div4{
+				width:20%;
+				height: 20%;
+				margin-left: 10%;
+				float:left;
+				margin-bottom: 1%;
+				display: inline-block;
+			}
+			.div4 button{
+				width: 60%;
+				height: 40px;
+				background-color: blue;
+				color: white;
+			}
+			.div5{
+				width:20%;
+				height: 40%;
+				padding-left:5%;
+				padding-right:10%;
+				float:left;
+				display: inline-block;
+			}
+			.div5 input{
+				width: 90%;
+				height: 40%;
+				font-size: 20px;
+			}
+			.div5 select{
+				width: 50%;
+				font-size: 15px;
+				float: left;
+				color: gray;
+			}
+			.div5 p{
+				font-size: 10px;
+			}			
+			.div6{
+				width:18%;
+				padding-left:2%;
+				float:left;
+				display: inline-block;
+				padding-top: 1%;
+				margin-bottom: 1%;
+			}
+				
+			.div6 input{
+				width: 50%;
+				font-size: 15px;
+			}
+			.div6 select{
+				width: 50%;
+				font-size: 14px;
+				color: gray;
+			}
+			.div6 p{
+				font-size: 10px;
+			}
+			.div7{
+				width:20%;
+				padding-left:2%;
+				float:left;
+				display: inline-block;
+				padding-top: 1%;
+				margin-bottom: 1%;
+			}
+			.div7 p{
+				width: 30%;
+				font-size: 14px;
+			}
+			.div8 input{
+				width: 80%;
+				height: 1.875rem;
+			}
+			.div8{
+				width:20%;
+				padding-left:2%;
+				float:left;
+				display: inline-block;
+				padding-top: 1%;
+				margin-bottom: 1%;
+			}
+			.div8 input{
+				width: 80%;
+				height: 1.875rem;
+			}
+			.div8 select{
+				width: 40%;
+				height: 30px;
+			}
+			.div8 span p{
+				padding-top: 2px;
+				color: gray;
+				padding-top: 25px;
+				text-align: center;
+			}
+			.div9{
+				width: 80%;
+				padding-left:2%;
+				float:left;
+				display: inline-block;
+				padding-top: 1%;
+				margin-bottom: 1%;	
+			}
+			.div9 input{
+				width: 40%;
+			}
+			.div10{
+				width: 30%;
+				padding-left:20%;
+				float:left;
+				display: inline-block;
+				padding-top: 1%;
+				margin-bottom: 1%;
+			}
+			.div10 button{
+				width: 60%;
+				height: 20px;
+			}
+			.div10 input{
+				width: 40%;
+				height: 40px;
+				background-color: #0000FF;
+				color: white;
+			}

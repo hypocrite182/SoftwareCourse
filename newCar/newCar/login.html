@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="./css/home.css" />
+		<link rel="stylesheet" href="css/leftmenu.css" />
+		<link rel="stylesheet" href="css/backgroundlayer.css" />
+		<link rel="stylesheet" href="./css/formblock.css" />
+		<script src="./js/nav.js" type="text/javascript"></script>
+		<script type="text/javascript" src="./js/page.js"></script>
+		<script type="text/javascript" src="js/carMessage.js"></script>
+		<script type="text/javascript">
+			function hideDeleteCar(id) {
+				var obj = document.getElementById("item-delete");
+				obj.style.display = "none";
+			}
+			//显示表单
+			function showmyform(width, height) {
+				var obj = document.getElementById("item-delete");
+				var winWidth = document.documentElement.clientWidth;
+				var winHeight = document.documentElement.clientHeight;
+				var offsetTop = document.documentElement.offsetTop;
+				var left = (winWidth - width) / 2;
+				var top = (winHeight - height) / 2 + offsetTop;
+				obj.style.top = top + "px";
+				obj.style.left = left + "px";
+				obj.style.display = "block";
+			}
+			 function popBox(id1,id2) {
+			
+			        var popBox = document.getElementById(id1);
+			
+			        var popLayer = document.getElementById(id2);
+			
+			        popBox.style.display = "block";
+					popLayer.style.background="gray";	
+			        popLayer.style.display = "block";
+			
+			    };
+				 /*点击关闭按钮*/
+				
+				    function closeBox() {
+				
+				        var popBox = document.getElementById("popBox");
+				
+				        var popLayer = document.getElementById("popLayer");
+				
+				        popBox.style.display = "none";
+						popLayer.style.background="white"
+				        popLayer.style.display = "";
+				
+				    }
+		</script>
+		<style>
+			body{
+				height:100%; 
+			}
+			
+			.myinput{
+				margin-left: 1.25rem;
+			}
+			
+			.mytable{
+				width: 100%;
+				height: 100%;
+				font-size: 0.625rem;
+			}
+				
+			.mytable td{
+				width: 135px;
+				height: 30px;
+				font-size: 20px;
+				text-align:left;
+				border:0px;
+			}
+			.mytable td button{
+				width: 100%;
+				height: 100%;
+			}
+			.mytable td select{
+				width: 100%;
+				height: 100%;
+			}
+			.mytable td a{
+				font-size: 0.9375rem;
+				text-align: left;
+				color: blue;
+			}
+			//隐藏
+			.myhider{
+			position:fixed;
+			display: none;
+			}
+			//翻页css
+			/*背景层*/
+			    a{text-decoration: none;}
+						 /*弹出层*/					
+						        #popBox {				
+						            display: none;
+						            background-color: #00BFFF;
+						            z-index: 11;	
+						            width: 400px;	
+						            height: 300px;	
+						            position:absolute;		
+						            top:0;			
+						            right:0;				
+						            left:0;						
+						            bottom:0;
+						            margin:auto;						
+						        }
+			//删除框的样式
+			#popBox div{
+				width: 30%;
+				height: 20px;
+				margin-left: 35%;
+				display: inline-block;
+			}
+			#popBox form input{
+				width: 20%;
+				margin-left: 20%;
+			}
+			#popBox button{
+				width: 20%;
+				display: inline-block;
+				margin-left: 20%;
+			}
+			#popBox form div input{
+				width: 60%;
+				height: 20px;
+				margin-left: 20%;
+				display: inline-block;
+			}	
+			#popBox form div span{
+				width: 100%;
+				text-align: center;
+				margin-left: 20%;
+			}
+			#popBox div span h4{
+				width: 60%;
+				text-align: center;
+				margin-left: 20%;
+			}
+			#popBox 
+		</style>
+	</head>
+	<body onload="Rendering();goPage(1,2)">
+		<div id="popLayer">
+			<div class="mynav" id="nav">
+			</div>
+			<div class="menu" id="lmenu">
+				<ul>
+					<li><a href="login.html">车辆登记管理</a></li>
+					<li><a href="loginexport.html">登记车辆信息导出</a></li>
+				</ul>
+			</div>
+			<div class="centers">
+				<div>
+					<form>
+						<fieldset>
+							<legend></legend>
+							<div class="div3">
+								<p>停车场ID:</p>
+								<input type="text" name="parkNum" />
+							</div>
+							<div class="div3">
+								<p>停车场名称:</p>
+								<input type="text" name="parkName" />
+							</div>
+							<div class="div3">
+								<p>车位卡编号:</p>
+								<input type="text" name="parkingcardNum" />
+							</div>
+							<div class="div3">
+								<p>车位卡名:</p>
+								<input type="text" name="parkingcardName" />
+							</div>
+							<div class="div3">
+								<p>车位卡类型:</p>
+								<select>
+									<option name="alltype">全部</option>
+									<option name="days">包天卡</option>
+									<option name="hours">时长卡</option>
+									<option name="times">次卡</option>
+								</select>
+							</div>
+							<div class="div3">
+								<p>状态:</p>
+								<select>
+									<option name="all">全部</option>
+									<option name="start">开启</option>
+									<option name="close">关闭</option>
+								</select>
+							</div>
+							<br />
+							<br />
+							<br />
+							<div class="div4">
+								<button>查询</button>
+							</div>
+							<div class="div4">
+								<button>重置</button>
+							</div>
+							<div class="div4">
+								<button type="button" onclick="window.location.href='insertNewparkingCard.html'">新增</button>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				<div>
+					<table class="mytable" id="idData">
+						<thead>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>序号</td>
+								<td>停车场ID</td>
+								<td>停车场名称</td>
+								<td>车位卡ID</td>
+								<td>车位卡名称</td>
+								<td>车位卡类型</td>
+								<td>内容</td>
+								<td>价格</td>
+								<td>持有人数</td>
+								<td>累计销量</td>
+								<td>操作</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>1</td>
+								<td>HN-JK-0001</td>
+								<td>福塔停车场</td>
+								<td>T-001</td>
+								<td>30天卡</td>
+								<td>包天卡</td>
+								<td>全天可用</td>
+								<td>400</td>
+								<td>34</td>
+								<td>666</td>
+								<td>
+									<a id="car-search" href="">查看</a>
+									<a id="car-update">修改</a>
+									<a id="car-delete" onclick="popBox('popBox','popLayer');carMessage_Delete(2)">删除</a>
+
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>2</td>
+								<td>HN-JK-0001</td>
+								<td>福塔停车场</td>
+								<td>T-001</td>
+								<td>30天卡</td>
+								<td>包天卡</td>
+								<td>全天可用</td>
+								<td>400</td>
+								<td>34</td>
+								<td>666</td>
+								<td>21</td>
+							</tr>
+						</tbody>
+					</table>
+					<table width: 100%;height: 100%;font-size: 0.75rem;>
+						<tfoot>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>
+									<select>
+										<option value="alltype">批量操作</option>
+										<option value="days">开启</option>
+										<option value="hours">关闭</option>
+										<option value="times">删除</option>
+									</select>
+								</td>
+								<td>
+									<button>确认</button>
+								</td>
+								<td>
+									<div id="barcon" name="barcon"></div>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id="popBox">
+			<div><span><h4>确认删除</h4></span></div>
+			<br />
+			<br />		
+			<form method="post" action="">
+				<div>
+					<span >停车场ID:</span>
+				</div>
+				<div >
+					
+					<input type="text"  name="parkNum" id="dparkNum"/>
+				</div>
+				<div >
+					<span>车位卡ID:</span>
+				</div>
+				<div>
+				
+					<input type="text" name="parkingcardNum" id="dparkingcardNum"/>
+				</div>
+				<br />
+					<br />
+					<input type="submit" value="删除" />		
+					<button type="button" onclick="closeBox()">取消</button>
+			</form>
+		</div>
+	</body>
+</html>
